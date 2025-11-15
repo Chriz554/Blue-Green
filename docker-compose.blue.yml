@@ -7,5 +7,6 @@ services:
     container_name: app-blue
     environment:
       - COLOR=blue
+      - PORT=8080
     ports:
-      - "3001:3000"
+      - "8081:8080"
