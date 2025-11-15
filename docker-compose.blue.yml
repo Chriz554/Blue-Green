@@ -1,12 +1,11 @@
-version: '3'
+version: "3.9"
+
 services:
-  app-blue:
-    build:
-      context: .
-      dockerfile: docker/Dockerfile
-    container_name: app-blue
-    environment:
-      - COLOR=blue
-      - PORT=8080
+  app:
+    container_name: app_blue
+    build: .
     ports:
       - "8081:8080"
+    environment:
+      - NODE_ENV=production
+    restart: always
